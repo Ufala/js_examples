@@ -66,15 +66,14 @@ VK.api("wall.get", { owner_id: [vk_user_id], count: 10 }, function (data) {
 console.log(data); 
 $("#wall_text").html(data.response[10].text);
             
-        
+         });
+    });
         for (var j=i i<=10; j++)  {
           var dv =$("<div></div>");
         dv.html(data.response[j].text);
         $("#wall_text").append(dv);
         }
-    });
-    });
-    </script>
+       </script>
 
 </body>
 </html>
