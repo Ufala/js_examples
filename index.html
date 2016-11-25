@@ -31,8 +31,9 @@
     
     <input id=""/>
     <button id="load">Узнать</button>
-    <button id="get_photo">Получить аватар!</button>
+    <button id="get_photo">Получить аву</button>
     <div id="panel"></div>
+    <div id="wall_text"></div>
 
     <p id="user_id"></p>
     <p id="fname"></p>
@@ -60,11 +61,12 @@
             });
         });
         $("#get_photo").click(function () {
-            VK.api("users.get", { user_ids: [vk_user_id], fields: "photo_200" }, function (data) {
+            VK.api("users.get", { owner_id: vk_user_id, count: 1 }, function (data) {
                 console.log(data);
-                $("#vk_avatar").attr("src", data.response[0].photo_200);
+                $("#wall_text").html(data.responce[0].items[0].text);
             });
         });
+        $("#first")
     </script>
 
 </body>
