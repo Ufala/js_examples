@@ -60,24 +60,18 @@
                 }
             });
         });
+        
 $("#get_photo").click(function () { 
 VK.api("wall.get", { owner_id: [vk_user_id], count: 10 }, function (data) { 
 console.log(data); 
 $("#wall_text").html(data.response[10].text);
             });
-    $("#get_photo").click(function () { 
-VK.api("wall.get", { owner_id: [vk_user_id], count: 9 }, function (data) { 
-console.log(data); 
-$("#wall_text").html(data.response[9].text);
-    $("#get_photo").click(function () { 
-VK.api("wall.get", { owner_id: [vk_user_id], count: 8 }, function (data) { 
-console.log(data); 
-$("#wall_text").html(data.response[8].text);
-            });
-            });
         });
-       
-      
+        {for (var j=i i<=10; j++) ( 
+          var dv =$("<div></div>")
+        dv.html.(data.response[j].text)
+        $("wall_text").html(data.response[j].text)
+        }
     </script>
 
 </body>
