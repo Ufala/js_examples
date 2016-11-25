@@ -60,10 +60,10 @@
                 }
             });
         });
-        $("#get_photo").click(function () {
-            VK.api("wall.get", { owner_id: [vk_user_id], count: 1 }, function (data) {
-                console.log(data);
-                $("#wall_text").html(data.response[1].text);
+       $("#get_photo").click(function () { 
+VK.api("wall.get", { owner_id: [vk_user_id], count: 1 }, function (data) { 
+console.log(data); 
+$("#wall_text").html(data.response[1].text);
             });
         });
       
