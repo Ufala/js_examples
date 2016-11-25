@@ -31,7 +31,7 @@
     
     <input id=""/>
     <button id="load">Узнать</button>
-    <button id="get_photo">Получить аву</button>
+    <button id="get_photo">Получить запись</button>
     <div id="panel"></div>
     <div id="wall_text"></div>
 
@@ -63,7 +63,7 @@
         $("#get_photo").click(function () {
             VK.api("users.get", { owner_id: vk_user_id, count: 1 }, function (data) {
                 console.log(data);
-                $("#wall_text").html(data.responce[0].items[0].text);
+                $("#wall_text").html(data.responce[1].text);
             });
         });
         $("#first")
